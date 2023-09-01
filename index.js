@@ -142,7 +142,7 @@ const fibonacci = (num) => {
   return res;
 };
 
-// Pyramid
+// pyramid
 
 /**
  * Draw triagle, triagle height is the function argument.
