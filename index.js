@@ -39,7 +39,7 @@ const clearWhiteSpace = (str) => {
  * @returns {string}
  */
 const cutStr = (str, maxLength) => {
-  return str.slice(0, maxLength) + "...";
+  return str.length > maxLength ? str.slice(0, maxLength) + "..." : str;
 };
 
 /**
@@ -49,7 +49,9 @@ const cutStr = (str, maxLength) => {
  * @returns {string}
  */
 const cutStr2 = (str, maxLength) => {
-  return str.match(new RegExp(`\.\{${maxLength}\}`)) + "...";
+  return str.length > maxLength
+    ? str.match(new RegExp(`\.\{${maxLength}\}`)) + "..."
+    : str;
 };
 
 // Palindrome
@@ -59,7 +61,7 @@ const cutStr2 = (str, maxLength) => {
  * @returns {boolean}
  */
 const palindrome = (str) => {
-  return str.toLowerCase() === reverse(str).toLocaleLowerCase();
+  return str.toLowerCase() === reverse(str).toLowerCase();
 };
 
 /**
