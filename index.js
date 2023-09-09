@@ -9,10 +9,9 @@
  */
 const filterRange = (arr, from, to) => {
   return Array.isArray(arr)
-    ? arr.slice(arr.indexOf(from), to ? arr.indexOf(to) + 1 : arr.length - 1)
-        .length > 0
-      ? arr.slice(arr.indexOf(from), to ? arr.indexOf(to) + 1 : arr.length - 1)
-      : -1
+    ? arr.filter((item) => {
+        return from <= item && item <= to;
+      })
     : -1;
 };
 
