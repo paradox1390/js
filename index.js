@@ -76,11 +76,11 @@ const getUserData2 = (id) => {
     if (res.length > 0) {
       setTimeout(() => {
         return resolve(res);
-      }, 5000);
+      }, 1000);
     } else {
       setTimeout(() => {
         return reject(new Error('"404 not found"'));
-      }, 3000);
+      }, 1000);
     }
   });
 };
