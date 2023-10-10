@@ -168,6 +168,6 @@ const product = {
 //   console.log(data)
 // );
 // ProductsService.deleteProduct(105).then((data) => console.log(data));
-ProductsService.deleteSeveralProducts(
-  `1,2,3,4,${Math.floor(Math.random() * (1000 - 5 + 1)) + 5}`
-).then((data) => console.log(data));
+// ProductsService.deleteSeveralProducts(
+//   `1,2,3,4,${Math.floor(Math.random() * (1000 - 5 + 1)) + 5}`
+// ).then((data) => console.log(data));
